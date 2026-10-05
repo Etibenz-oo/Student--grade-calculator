@@ -13,6 +13,11 @@ rows.forEach(function(row) {
             let ca3 = Number(scores[2].value);
             let exam = Number(scores[3].value);
 
+            if (ca1 > 100) scores[0].value = 100;
+            if (ca2 > 100) scores[1].value = 100;
+            if (ca3 > 100) scores[2].value = 100;
+            if (exam > 100) scores[3].value = 100;
+
             let total = ca1 + ca2 + ca3 + exam;
             let grade;
 
